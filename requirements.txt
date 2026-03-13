@@ -1,0 +1,9 @@
+tensorflow==2.15.0
+tensorflow-io==0.35.0
+scikit-image
+numpy
+Pillow
+matplotlib
+tqdm
+flask
+streamlit

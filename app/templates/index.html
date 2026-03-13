@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Colorizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Image Colorization AI</h1>
+            <p>Transform your old grayscale photos into vibrant colored images using deep learning.</p>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <form id="upload-form">
+                    <label for="image-upload" class="custom-file-upload">
+                        Click to Choose an Image
+                    </label>
+                    <input id="image-upload" type="file" name="image" accept="image/*" />
+                    <button type="submit" id="colorize-btn" disabled>Colorize</button>
+                </form>
+                <p id="file-name"></p>
+                <div id="loading" class="hidden">Processing image... Please wait.</div>
+            </div>
+
+            <div class="results-section hidden" id="results-section">
+                <div class="image-box">
+                    <h3>Original</h3>
+                    <img id="original-image" src="" alt="Original Grayscale" />
+                </div>
+                <div class="image-box">
+                    <h3>Colorized Result</h3>
+                    <img id="colorized-image" src="" alt="Colorized Output" />
+                </div>
+            </div>
+        </main>
+        
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </div>
+</body>
+</html>
